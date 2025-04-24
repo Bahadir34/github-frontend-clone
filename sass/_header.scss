@@ -1,0 +1,137 @@
+.header {
+  width: 100%;
+  background-color: $dark-background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+
+  .nav-side {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 2rem;
+
+    .github {
+      font-size: 3rem;
+      color: #fefefe;
+    }
+
+    .input-field {
+      background-color: $input-background;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 30rem;
+      height: 3rem;
+      border-radius: 0.2rem;
+
+      input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+      }
+      p {
+        color: gray;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        border: solid 0.1rem gray;
+        padding: 0.1rem 0.6rem;
+        border-radius: 0.3rem;
+      }
+    }
+    nav {
+      @include tablet {
+        display: none;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        li {
+          a {
+            color: #fefefe;
+            font-size: 1.2rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  .profile-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 4.5rem;
+    .bell {
+      cursor: pointer;
+      font-size: 1.4rem;
+      color: #fefefe;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 0.7rem;
+        aspect-ratio: 1;
+        background-color: #2d71b2;
+        display: block;
+
+        position: absolute;
+        top: -0.3rem;
+        left: 0.7rem;
+        border-radius: 50%;
+      }
+    }
+
+    .plus {
+      cursor: pointer;
+      font-size: 1.4rem;
+      color: #fefefe;
+      position: relative;
+
+      &::after {
+        cursor: pointer;
+        content: "";
+        position: absolute;
+        right: -2rem; // Profil görseline göre konum ayarı
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 0.4rem solid transparent;
+        border-right: 0.4rem solid transparent;
+        border-top: 0.4rem solid white; // Okun rengi
+      }
+    }
+    #image-cover {
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      img {
+        margin-left: 2rem;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: block;
+        object-fit: cover;
+      }
+      &::before {
+        cursor: pointer;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5rem; // sağa yasla
+        transform: translateY(-50%);
+        margin-left: 0.6rem; // img ile ok arası boşluk
+        border-left: 0.4rem solid transparent;
+        border-right: 0.4rem solid transparent;
+        border-top: 0.4rem solid white; // okun rengi
+      }
+    }
+  }
+}

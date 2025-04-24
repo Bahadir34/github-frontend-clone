@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  width: 100%;
+  background-color: #252c32;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+}
+.header .nav-side {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+.header .nav-side .github {
+  font-size: 3rem;
+  color: #fefefe;
+}
+.header .nav-side .input-field {
+  background-color: #494e51;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 30rem;
+  height: 3rem;
+  border-radius: 0.2rem;
+}
+.header .nav-side .input-field input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.header .nav-side .input-field p {
+  color: gray;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  border: solid 0.1rem gray;
+  padding: 0.1rem 0.6rem;
+  border-radius: 0.3rem;
+}
+@media (max-width: 900px) {
+  .header .nav-side nav {
+    display: none;
+  }
+}
+.header .nav-side nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header .nav-side nav ul li a {
+  color: #fefefe;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.header .profile-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-right: 4.5rem;
+}
+.header .profile-side .bell {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #fefefe;
+  position: relative;
+}
+.header .profile-side .bell::after {
+  content: "";
+  width: 0.7rem;
+  aspect-ratio: 1;
+  background-color: #2d71b2;
+  display: block;
+  position: absolute;
+  top: -0.3rem;
+  left: 0.7rem;
+  border-radius: 50%;
+}
+.header .profile-side .plus {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #fefefe;
+  position: relative;
+}
+.header .profile-side .plus::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.4rem solid white;
+}
+.header .profile-side #image-cover {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.header .profile-side #image-cover img {
+  margin-left: 2rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .profile-side #image-cover::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  transform: translateY(-50%);
+  margin-left: 0.6rem;
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.4rem solid white;
+}
+
+#main {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  margin: 3rem 15rem;
+  gap: 5rem;
+}
+#main-profile {
+  flex: 1;
+}
+#main-profile-status {
+  display: flex;
+  flex-direction: column;
+}
+#main-profile-status img {
+  width: 300px;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main-profile-status div {
+  padding: 1rem 0;
+  padding-left: 0.5rem;
+  width: 300px;
+  border-left: 0.1px solid gray;
+  border-bottom: 0.1px solid gray;
+  border-right: 0.1px solid gray;
+}
+#main-profile-status div i {
+  color: rgb(139, 138, 138);
+  font-size: 1.3rem;
+  margin: auto;
+}
+#main-profile-status div a {
+  color: rgb(139, 138, 138);
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+#main-profile h1 {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+}
+#main-profile h3 {
+  font-size: 1.5rem;
+  color: rgb(139, 138, 138);
+}
+#main-profile button {
+  cursor: pointer;
+  margin-top: 2rem;
+  width: 100%;
+  height: 3rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: gray solid 0.1rem;
+  margin-bottom: 1rem;
+}
+#main-profile #school {
+  margin: 1rem 0;
+  font-size: 1.2rem !important;
+  font-weight: 400;
+  color: rgb(104, 103, 103);
+}
+#main-profile #github-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#main-profile #github-link i {
+  font-size: 1.3rem;
+  color: rgb(139, 138, 138);
+}
+#main-profile #github-link a {
+  font-size: 1.2rem;
+  color: rgb(40, 151, 220);
+}
+#main-profile h2 {
+  margin-top: 1rem;
+}
+#main-profile p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+#main-dashboard {
+  flex: 3;
+  margin-top: 1rem;
+}
+#main-dashboard nav {
+  margin-bottom: 1rem;
+}
+#main-dashboard nav ul {
+  margin-left: 1rem;
+  display: flex;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+#main-dashboard nav ul li {
+  cursor: pointer;
+}
+#main-dashboard nav ul li a {
+  font-size: 1.2rem;
+  color: grey;
+}
+#main-dashboard nav ul li:first-child {
+  position: relative;
+}
+#main-dashboard nav ul li:first-child::after {
+  content: "";
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  height: 0.3rem;
+  display: block;
+  background-color: #e1aa85;
+  position: absolute;
+  top: 2.3rem;
+  border-radius: 0.3rem;
+}
+#main #featured {
+  margin-top: 3rem;
+}
+#main #featured-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+#main #featured-nav h3 {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+#main #featured-nav a {
+  font-size: 1rem;
+  color: grey;
+}
+#main #featured-repos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem;
+}
+#main #featured-repos-cart {
+  cursor: pointer;
+  max-width: 39rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  min-height: 9rem;
+  border: 0.1rem solid rgb(231, 229, 229);
+  border-radius: 0.2rem;
+}
+#main #featured-repos-cart-up {
+  display: flex;
+  justify-content: space-between;
+}
+#main #featured-repos-cart-up div {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+#main #featured-repos-cart-up div i {
+  font-size: 1.3rem;
+  color: rgb(104, 103, 103);
+}
+#main #featured-repos-cart-up div p {
+  font-size: 1.3rem;
+  color: rgb(40, 151, 220);
+}
+#main #featured-repos-cart-up i {
+  color: rgb(104, 103, 103);
+}
+#main #featured-repos #language {
+  position: relative;
+  margin-left: 1rem;
+}
+#main #featured-repos #language::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: purple;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -1.3rem;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(211, 211, 211, 0.563);
+}
